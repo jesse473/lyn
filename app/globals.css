@@ -1,0 +1,354 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --background: oklch(0.08 0.02 264); /* Dark cyberpunk background */
+  --foreground: oklch(0.98 0.01 180); /* Bright white text */
+  --card: oklch(0.12 0.03 264); /* Slightly lighter dark cards */
+  --card-foreground: oklch(0.95 0.01 180); /* Card text */
+  --popover: oklch(0.12 0.03 264); /* Popover background */
+  --popover-foreground: oklch(0.95 0.01 180); /* Popover text */
+  --primary: oklch(0.7 0.15 195); /* Cyan primary */
+  --primary-foreground: oklch(0.08 0.02 264); /* Dark text on cyan */
+  --secondary: oklch(0.65 0.25 320); /* Magenta secondary */
+  --secondary-foreground: oklch(0.98 0.01 180); /* White text on magenta */
+  --muted: oklch(0.15 0.02 264); /* Muted background */
+  --muted-foreground: oklch(0.7 0.01 180); /* Muted text */
+  --accent: oklch(0.65 0.25 320); /* Magenta accent */
+  --accent-foreground: oklch(0.98 0.01 180); /* White text on accent */
+  --destructive: oklch(0.6 0.2 15); /* Red destructive */
+  --destructive-foreground: oklch(0.98 0.01 180); /* White text on red */
+  --border: oklch(0.2 0.02 264); /* Subtle borders */
+  --input: oklch(0.15 0.02 264); /* Input backgrounds */
+  --ring: oklch(0.7 0.15 195); /* Cyan focus rings */
+  --chart-1: oklch(0.7 0.15 195); /* Cyan */
+  --chart-2: oklch(0.65 0.25 320); /* Magenta */
+  --chart-3: oklch(0.6 0.15 140); /* Green */
+  --chart-4: oklch(0.7 0.2 60); /* Orange */
+  --chart-5: oklch(0.6 0.2 280); /* Purple */
+  --radius: 0.75rem;
+  --sidebar: oklch(0.1 0.02 264);
+  --sidebar-foreground: oklch(0.95 0.01 180);
+  --sidebar-primary: oklch(0.7 0.15 195);
+  --sidebar-primary-foreground: oklch(0.08 0.02 264);
+  --sidebar-accent: oklch(0.15 0.02 264);
+  --sidebar-accent-foreground: oklch(0.95 0.01 180);
+  --sidebar-border: oklch(0.2 0.02 264);
+  --sidebar-ring: oklch(0.7 0.15 195);
+}
+
+.dark {
+  --background: oklch(0.08 0.02 264);
+  --foreground: oklch(0.98 0.01 180);
+  --card: oklch(0.12 0.03 264);
+  --card-foreground: oklch(0.95 0.01 180);
+  --popover: oklch(0.12 0.03 264);
+  --popover-foreground: oklch(0.95 0.01 180);
+  --primary: oklch(0.7 0.15 195);
+  --primary-foreground: oklch(0.08 0.02 264);
+  --secondary: oklch(0.65 0.25 320);
+  --secondary-foreground: oklch(0.98 0.01 180);
+  --muted: oklch(0.15 0.02 264);
+  --muted-foreground: oklch(0.7 0.01 180);
+  --accent: oklch(0.65 0.25 320);
+  --accent-foreground: oklch(0.98 0.01 180);
+  --destructive: oklch(0.6 0.2 15);
+  --destructive-foreground: oklch(0.98 0.01 180);
+  --border: oklch(0.2 0.02 264);
+  --input: oklch(0.15 0.02 264);
+  --ring: oklch(0.7 0.15 195);
+  --chart-1: oklch(0.7 0.15 195);
+  --chart-2: oklch(0.65 0.25 320);
+  --chart-3: oklch(0.6 0.15 140);
+  --chart-4: oklch(0.7 0.2 60);
+  --chart-5: oklch(0.6 0.2 280);
+  --sidebar: oklch(0.1 0.02 264);
+  --sidebar-foreground: oklch(0.95 0.01 180);
+  --sidebar-primary: oklch(0.7 0.15 195);
+  --sidebar-primary-foreground: oklch(0.08 0.02 264);
+  --sidebar-accent: oklch(0.15 0.02 264);
+  --sidebar-accent-foreground: oklch(0.95 0.01 180);
+  --sidebar-border: oklch(0.2 0.02 264);
+  --sidebar-ring: oklch(0.7 0.15 195);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Added custom cyberpunk gradient utilities */
+@layer utilities {
+  .gradient-cyber {
+    background: linear-gradient(135deg, oklch(0.7 0.15 195) 0%, oklch(0.65 0.25 320) 100%);
+  }
+
+  .gradient-cyber-reverse {
+    background: linear-gradient(135deg, oklch(0.65 0.25 320) 0%, oklch(0.7 0.15 195) 100%);
+  }
+
+  .text-gradient-cyber {
+    background: linear-gradient(135deg, oklch(0.7 0.15 195) 0%, oklch(0.65 0.25 320) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .glow-cyber {
+    box-shadow: 0 0 20px oklch(0.7 0.15 195 / 0.3), 0 0 40px oklch(0.65 0.25 320 / 0.2);
+  }
+
+  .border-gradient-cyber {
+    border: 2px solid transparent;
+    background: linear-gradient(oklch(0.12 0.03 264), oklch(0.12 0.03 264)) padding-box,
+      linear-gradient(135deg, oklch(0.7 0.15 195), oklch(0.65 0.25 320)) border-box;
+  }
+
+  /* Adding glitch button and text effects for cyberpunk enter button */
+  .glitch-button {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .glitch-button::before,
+  .glitch-button::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: inherit;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .glitch-button::before {
+    animation: glitch-1 0.3s infinite linear alternate-reverse;
+  }
+
+  .glitch-button::after {
+    animation: glitch-2 0.3s infinite linear alternate-reverse;
+  }
+
+  .glitch-text {
+    position: relative;
+    display: inline-block;
+  }
+
+  .glitch-text::before,
+  .glitch-text::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+  }
+
+  .glitch-text::before {
+    animation: glitch-text-1 0.6s infinite linear alternate-reverse;
+    color: #ff00ff;
+    z-index: -1;
+  }
+
+  .glitch-text::after {
+    animation: glitch-text-2 0.6s infinite linear alternate-reverse;
+    color: #00ffff;
+    z-index: -2;
+  }
+
+  @keyframes glitch-1 {
+    0% {
+      transform: translate(0);
+      opacity: 0;
+    }
+    10% {
+      transform: translate(-2px, -2px);
+      opacity: 0.3;
+    }
+    20% {
+      transform: translate(-2px, -2px);
+      opacity: 0;
+    }
+    30% {
+      transform: translate(2px, 2px);
+      opacity: 0.3;
+    }
+    40% {
+      transform: translate(2px, 2px);
+      opacity: 0;
+    }
+    50% {
+      transform: translate(-1px, 2px);
+      opacity: 0.2;
+    }
+    60% {
+      transform: translate(-1px, 2px);
+      opacity: 0;
+    }
+    70% {
+      transform: translate(2px, 1px);
+      opacity: 0.3;
+    }
+    80% {
+      transform: translate(2px, 1px);
+      opacity: 0;
+    }
+    90% {
+      transform: translate(1px, -1px);
+      opacity: 0.2;
+    }
+    100% {
+      transform: translate(1px, -1px);
+      opacity: 0;
+    }
+  }
+
+  @keyframes glitch-2 {
+    0% {
+      transform: translate(0);
+      opacity: 0;
+    }
+    15% {
+      transform: translate(2px, 1px);
+      opacity: 0.2;
+    }
+    25% {
+      transform: translate(2px, 1px);
+      opacity: 0;
+    }
+    35% {
+      transform: translate(-1px, -2px);
+      opacity: 0.3;
+    }
+    45% {
+      transform: translate(-1px, -2px);
+      opacity: 0;
+    }
+    55% {
+      transform: translate(1px, 2px);
+      opacity: 0.2;
+    }
+    65% {
+      transform: translate(1px, 2px);
+      opacity: 0;
+    }
+    75% {
+      transform: translate(-2px, 1px);
+      opacity: 0.3;
+    }
+    85% {
+      transform: translate(-2px, 1px);
+      opacity: 0;
+    }
+    95% {
+      transform: translate(2px, -1px);
+      opacity: 0.2;
+    }
+    100% {
+      transform: translate(2px, -1px);
+      opacity: 0;
+    }
+  }
+
+  @keyframes glitch-text-1 {
+    0% {
+      transform: translate(0);
+      opacity: 0;
+    }
+    20% {
+      transform: translate(-1px, 1px);
+      opacity: 0.4;
+    }
+    40% {
+      transform: translate(-1px, 1px);
+      opacity: 0;
+    }
+    60% {
+      transform: translate(1px, -1px);
+      opacity: 0.4;
+    }
+    80% {
+      transform: translate(1px, -1px);
+      opacity: 0;
+    }
+    100% {
+      transform: translate(0);
+      opacity: 0;
+    }
+  }
+
+  @keyframes glitch-text-2 {
+    0% {
+      transform: translate(0);
+      opacity: 0;
+    }
+    30% {
+      transform: translate(1px, -1px);
+      opacity: 0.3;
+    }
+    50% {
+      transform: translate(1px, -1px);
+      opacity: 0;
+    }
+    70% {
+      transform: translate(-1px, 1px);
+      opacity: 0.3;
+    }
+    90% {
+      transform: translate(-1px, 1px);
+      opacity: 0;
+    }
+    100% {
+      transform: translate(0);
+      opacity: 0;
+    }
+  }
+}
