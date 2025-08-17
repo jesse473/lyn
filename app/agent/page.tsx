@@ -67,6 +67,7 @@ export default function AgentPage() {
   const [showComingSoon, setShowComingSoon] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const messagesEndRef = useRef<HTMLDivElement>(null)
+  const [cwindow, setCwindow] = useState({}) as any;
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" })
@@ -75,6 +76,12 @@ export default function AgentPage() {
   useEffect(() => {
     scrollToBottom()
   }, [messages])
+
+  useEffect(() => {
+    if(window){
+      setCwindow(window);
+    }
+  }, []);
 
   const typeMessage = async (text: string) => {
     setIsTyping(true)
@@ -162,7 +169,7 @@ export default function AgentPage() {
       <motion.div
         initial={false}
         animate={{
-          x: window.innerWidth >= 768 ? 0 : isMobileMenuOpen ? 0 : "-100%",
+          x: cwindow?.innerWidth >= 768 ? 0 : isMobileMenuOpen ? 0 : "-100%",
         }}
         className="fixed h-screen md:static w-64 bg-black backdrop-blur-xl border-r border-pink-500/20 flex flex-col z-50"
       >
