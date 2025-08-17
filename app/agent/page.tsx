@@ -41,6 +41,7 @@ const sidebarItems = [
 const tokenItems = [
   { icon: DollarSign, label: "Burn Tracker", badge: "New" },
   { icon: BarChart3, label: "Metrics" },
+  { icon: Shield, label: "Buy $LYN" },
   { icon: Sparkles, label: "Staking" },
 ]
 
@@ -163,7 +164,7 @@ export default function AgentPage() {
         animate={{
           x: window.innerWidth >= 768 ? 0 : isMobileMenuOpen ? 0 : "-100%",
         }}
-        className="fixed md:static w-64 bg-black backdrop-blur-xl border-r border-pink-500/20 flex flex-col z-50 h-full"
+        className="fixed h-screen md:static w-64 bg-black backdrop-blur-xl border-r border-pink-500/20 flex flex-col z-50"
       >
         <div className="md:hidden absolute top-4 right-4">
           <Button
@@ -178,14 +179,14 @@ export default function AgentPage() {
 
         {/* Header */}
         <div className="p-6 border-b border-pink-500/20">
-          <a href="/" className="flex items-center gap-3">
+          <div className="flex items-center gap-3">
             <img
               src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/lyn1-rQmdjMyNM3j0GapXG4j68QjEGHpMdF.jpeg"
               alt="LYN AI"
               className="w-8 h-8 rounded-full object-cover"
             />
             <span className="text-white font-semibold text-lg">LYN AI</span>
-          </a>
+          </div>
         </div>
 
         {/* Navigation */}
@@ -247,7 +248,7 @@ export default function AgentPage() {
               <HelpCircle className="w-3 h-3 text-gray-400" />
             </div>
           </div>
-          <div className="text-gray-600 text-xs mt-2">2025 © LYN AI. v1.1 | 3hFE...pump</div>
+          <div className="text-gray-600 text-xs mt-2">2025 © LYN AI. v1.1 | 0xc4f8B</div>
         </div>
       </motion.div>
 
@@ -302,12 +303,12 @@ export default function AgentPage() {
                 </div>
               ))}
             </div>
-            <a href="https://pump.fun/coin/3hFEAFfPBgquhPcuQYJWufENYg9pjMDvgEEsv4jxpump" className="flex items-center gap-2 text-gray-400 text-sm">
+            <div className="flex items-center gap-2 text-gray-400 text-sm">
               <span className="hidden sm:inline">0 LYN</span>
               <Button size="sm" className="bg-pink-600 hover:bg-pink-700 text-white text-xs px-2 md:px-4">
-                Buy $LYN
+                Login
               </Button>
-            </a>
+            </div>
           </div>
         </div>
 
