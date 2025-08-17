@@ -186,14 +186,14 @@ export default function AgentPage() {
 
         {/* Header */}
         <div className="p-6 border-b border-pink-500/20">
-          <div className="flex items-center gap-3">
+          <a href="/" className="flex items-center gap-3">
             <img
               src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/lyn1-rQmdjMyNM3j0GapXG4j68QjEGHpMdF.jpeg"
               alt="LYN AI"
               className="w-8 h-8 rounded-full object-cover"
             />
             <span className="text-white font-semibold text-lg">LYN AI</span>
-          </div>
+          </a>
         </div>
 
         {/* Navigation */}
