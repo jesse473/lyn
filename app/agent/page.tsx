@@ -435,7 +435,7 @@ export default function AgentPage() {
                   onChange={(e) => setInputValue(e.target.value)}
                   onKeyPress={(e) => e.key === "Enter" && handleSendMessage(inputValue)}
                   placeholder="Ask me anything..."
-                  className="bg-gray-900/50 border-gray-700/50 text-white placeholder-gray-500 pr-16 md:pr-20 text-sm md:text-base"
+                  className="bg-gray-900/50 border-gray-700/50 text-white focus:outline-none placeholder-gray-500 pr-16 md:pr-20 text-sm md:text-base"
                 />
                 <Button
                   size="sm"

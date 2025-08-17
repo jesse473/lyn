@@ -298,8 +298,7 @@ export default function HomePage() {
               Your Next-Generation AI Companion
             </motion.p>
             <motion.p className="text-sm mb-8 stext-muted-foreground max-w-2xl mx-auto" variants={fadeInUp}>
-              The Art reposted by Elon Musk and the next Grok xAI companion. Experience the future of AI interaction with
-              LYN.
+              Designed by @lyn_beatz, LYN is your gateway to the future of AI interaction — galactic, witty, and unforgettable.
             </motion.p>
             <motion.div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8" variants={fadeInUp}>
               <Link href="/agent">
