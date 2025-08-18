@@ -195,7 +195,7 @@ export default function HomePage() {
                   <img src="/dex.png" className="h-6 w-6" />
                 </a>
               </div>
-              <Link href="https://app.lynai.xyz">
+              <Link href="https://agent.lynai.xyz">
                 <Button className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white px-6 py-2 rounded-full font-semibold text-sm">
                   Launch Agent
                 </Button>
@@ -254,7 +254,7 @@ export default function HomePage() {
                       </svg>
                     </a>
                   </div>
-                  <Link href="https://app.lynai.xyz">
+                  <Link href="https://agent.lynai.xyz">
                     <Button className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white px-4 py-2 rounded-full font-semibold text-sm">
                       Launch Agent
                     </Button>
@@ -306,7 +306,7 @@ export default function HomePage() {
               Designed by @lyn_beatz, LYN is your gateway to the future of AI interaction — galactic, witty, and unforgettable.
             </motion.p>
             <motion.div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8" variants={fadeInUp}>
-              <Link href="https://app.lynai.xyz">
+              <Link href="https://agent.lynai.xyz">
                 <Button size="lg" className="!px-7 rounded-full gradient-cyber text-primary-foreground hover:opacity-90 glow-cyber">
                   LYN AI Agent<ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
@@ -662,7 +662,7 @@ export default function HomePage() {
               Step into the mind of Mars’ favorite billionaire and see what the algorithms are cooking.
             </motion.p>
             <motion.div variants={fadeInUp}>
-              <Link href="https://app.lynai.xyz">
+              <Link href="https://agent.lynai.xyz">
                 <Button
                   size="lg"
                   className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white border-black !px-8 py-5 text-lg font-semibold rounded-full transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-purple-500/25"
@@ -698,7 +698,7 @@ export default function HomePage() {
               </div>
               <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-12">
                 <div className="flex flex-col space-y-3 font-mono text-sm">
-                  <a href="https://app.lynai.xyz/terminal" className="text-gray-300 hover:text-white transition-colors">
+                  <a href="https://agent.lynai.xyz/terminal" className="text-gray-300 hover:text-white transition-colors">
                     Terminal
                   </a>
                   <a href="https://x.com/i/communities/1956630029024043234" className="text-gray-300 hover:text-white transition-colors">
