@@ -59,7 +59,8 @@ export default function HomePage() {
         className="absolute inset-0 w-full h-screen md:w-auto md:left-1/2 md:transform md:-translate-x-1/2 object-cover md:object-contain"
       >
         <source
-          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ssstwitter.com_1755438560544-MA3OoTKGXToA6XpaXI8lQ3zNKfy9wn.mp4"
+          src="/load.mp4"
+          // src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ssstwitter.com_1755438560544-MA3OoTKGXToA6XpaXI8lQ3zNKfy9wn.mp4"
           type="video/mp4"
         />
       </video>
@@ -124,23 +125,27 @@ export default function HomePage() {
                   transition={{ duration: 0.8, repeat: Number.POSITIVE_INFINITY }}
                 />
 
-                <motion.span
-                  className="relative z-10 flex items-center glitch-text"
-                  animate={{
-                    textShadow: [
-                      "2px 0 #ff00ff, -2px 0 #00ffff",
-                      "0 0 #ff00ff, 0 0 #00ffff",
-                      "2px 0 #ff00ff, -2px 0 #00ffff",
-                      "0 0 #ff00ff, 0 0 #00ffff",
-                    ],
-                  }}
-                  transition={{ duration: 0.3, repeat: Number.POSITIVE_INFINITY }}
-                >
-                  <div className="flex items-center justify-center gap-1">
-                    <TerminalIcon />
-                    <p>Enter</p>
-                  </div>
-                </motion.span>
+                {
+                  loadingPercentage == 100 &&
+                  <motion.span
+                    className="relative z-10 flex items-center glitch-text"
+                    animate={{
+                      textShadow: [
+                        "2px 0 #ff00ff, -2px 0 #00ffff",
+                        "0 0 #ff00ff, 0 0 #00ffff",
+                        "2px 0 #ff00ff, -2px 0 #00ffff",
+                        "0 0 #ff00ff, 0 0 #00ffff",
+                      ],
+                    }}
+                    transition={{ duration: 0.3, repeat: Number.POSITIVE_INFINITY }}
+                  >
+                    <div className="flex items-center justify-center gap-1">
+                      <TerminalIcon />
+                      <p>Enter</p>
+                    </div>
+                  </motion.span>
+                }
+
 
                 <motion.div
                   className="absolute inset-0 bg-gradient-to-b from-transparent via-pink-500/30 to-transparent opacity-0 group-hover:opacity-100"
@@ -190,7 +195,7 @@ export default function HomePage() {
                   <img src="/dex.png" className="h-6 w-6" />
                 </a>
               </div>
-              <Link href="/agent">
+              <Link href="https://app.lynai.xyz">
                 <Button className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white px-6 py-2 rounded-full font-semibold text-sm">
                   Launch Agent
                 </Button>
@@ -249,7 +254,7 @@ export default function HomePage() {
                       </svg>
                     </a>
                   </div>
-                  <Link href="/agent">
+                  <Link href="https://app.lynai.xyz">
                     <Button className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white px-4 py-2 rounded-full font-semibold text-sm">
                       Launch Agent
                     </Button>
@@ -301,7 +306,7 @@ export default function HomePage() {
               Designed by @lyn_beatz, LYN is your gateway to the future of AI interaction — galactic, witty, and unforgettable.
             </motion.p>
             <motion.div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8" variants={fadeInUp}>
-              <Link href="/agent">
+              <Link href="https://app.lynai.xyz">
                 <Button size="lg" className="!px-7 rounded-full gradient-cyber text-primary-foreground hover:opacity-90 glow-cyber">
                   LYN AI Agent<ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
@@ -657,7 +662,7 @@ export default function HomePage() {
               Step into the mind of Mars’ favorite billionaire and see what the algorithms are cooking.
             </motion.p>
             <motion.div variants={fadeInUp}>
-              <Link href="/agent">
+              <Link href="https://app.lynai.xyz">
                 <Button
                   size="lg"
                   className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white border-black !px-8 py-5 text-lg font-semibold rounded-full transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-purple-500/25"
@@ -693,7 +698,7 @@ export default function HomePage() {
               </div>
               <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-12">
                 <div className="flex flex-col space-y-3 font-mono text-sm">
-                  <a href="/agent" className="text-gray-300 hover:text-white transition-colors">
+                  <a href="https://app.lynai.xyz/terminal" className="text-gray-300 hover:text-white transition-colors">
                     Terminal
                   </a>
                   <a href="https://x.com/i/communities/1956630029024043234" className="text-gray-300 hover:text-white transition-colors">

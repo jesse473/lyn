@@ -273,47 +273,23 @@ export default function AgentPage() {
               <Menu className="w-5 h-5" />
             </Button>
             <div className="hidden md:flex items-center gap-4">
-              <div className="w-6 h-6 bg-gray-700 rounded"></div>
-              <div className="text-gray-400 text-sm">Edit</div>
+              <p className="font-mono">0 $LYN</p>
             </div>
           </div>
           <div className="flex items-center gap-2 md:gap-6">
-            <div className="hidden lg:flex items-center gap-8">
-              {[
-                { step: 1, label: "Login", status: "completed" },
-                { step: 2, label: "Deploy", status: "completed" },
-                { step: 3, label: "Fund", status: "current" },
-                { step: 4, label: "Create", status: "pending" },
-              ].map((item, index) => (
-                <div key={item.step} className="flex items-center gap-2">
-                  <div
-                    className={`w-2 h-2 rounded-full ${
-                      item.status === "completed"
-                        ? "bg-cyan-400"
-                        : item.status === "current"
-                          ? "bg-pink-400"
-                          : "bg-gray-600"
-                    }`}
-                  ></div>
-                  <div className="text-xs">
-                    <div className="text-gray-400">
-                      {item.step}. {item.label}
-                    </div>
-                    <div className="text-gray-600 text-[10px]">
-                      {item.status === "completed"
-                        ? "completed"
-                        : item.status === "current"
-                          ? "in progress"
-                          : "pending"}
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-            <div className="flex items-center gap-2 text-gray-400 text-sm">
-              <span className="hidden sm:inline">0 LYN</span>
+            <div className="flex items-center space-x-4">
+                <a href="https://x.com/i/communities/1956630029024043234" className="text-muted-foreground hover:text-foreground transition-colors">
+                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                  </svg>
+                </a>
+                <a href="https://dexscreener.com/solana/pdrxhlz74ymmd6bjyx6wflbie79c3cao58yiqvontbn" className="text-muted-foreground hover:text-foreground transition-colors">
+                  <img src="/dex.png" className="h-6 w-6" />
+                </a>
+              </div>
+            <div className="flex items-center text-gray-400 text-sm gap-5">
               <Button size="sm" className="bg-pink-600 hover:bg-pink-700 text-white text-xs px-2 md:px-4">
-                Login
+                BUY $LYN
               </Button>
             </div>
           </div>
